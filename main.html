@@ -7,7 +7,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; }
-
     body {
       margin: 0;
       min-height: 100vh;
@@ -20,7 +19,6 @@
       position: relative;
       z-index: 1;
     }
-
     body::before {
       content: "";
       position: fixed;
@@ -29,7 +27,6 @@
       background-size: cover;
       z-index: -2;
     }
-
     body::after {
       content: "";
       position: fixed;
@@ -37,9 +34,8 @@
       background: radial-gradient(circle, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.95) 100%);
       z-index: -1;
     }
-
     main {
-      background: rgba(75, 75,75, 0.5); /* Aqui a transparência foi reduzida */
+      background: rgba(75, 75, 75, 0.5);
       border: 2px solid #00ff99;
       border-radius: 15px;
       padding: 40px 30px;
@@ -49,7 +45,6 @@
       box-shadow: 0 0 30px #00ff99aa;
       animation: fadeIn 1s ease forwards;
     }
-
     h1 {
       font-family: 'Press Start 2P', cursive;
       font-size: 1.5rem;
@@ -57,23 +52,19 @@
       margin-bottom: 10px;
       text-shadow: 2px 2px #000;
     }
-
     .status {
       font-size: 0.9rem;
       margin-bottom: 20px;
       color: #00ff99;
     }
-
     p {
       margin: 15px 0;
       line-height: 1.6;
       text-align: left;
     }
-
     .buttons-group {
       margin: 20px 0;
     }
-
     a.button, button.button {
       display: inline-block;
       margin: 8px 5px;
@@ -87,12 +78,10 @@
       cursor: pointer;
       transition: background 0.3s, transform 0.3s;
     }
-
     a.button:hover, button.button:hover {
       background: #ff6b6b;
       transform: translateY(-2px);
     }
-
     .modal {
       display: none;
       position: fixed;
@@ -102,7 +91,6 @@
       background: rgba(0,0,0,0.85);
       overflow-y: auto;
     }
-
     .modal-content {
       background: #111;
       margin: 5% auto;
@@ -110,7 +98,7 @@
       border: 2px solid #00ff99;
       width: 90%;
       max-width: 600px;
-      text-align: left;
+      text-align: center;
       border-radius: 10px;
       box-shadow: 0 0 20px #00ff99aa;
       position: relative;
@@ -118,13 +106,10 @@
       max-height: 90vh;
       overflow-y: auto;
     }
-
     .modal-content h2 {
       margin-bottom: 20px;
       color: #00ff99;
-      text-align: center;
     }
-
     .close {
       position: absolute;
       right: 15px; top: 10px;
@@ -132,7 +117,6 @@
       color: #fff;
       cursor: pointer;
     }
-
     .pix-key {
       background: #222;
       padding: 10px 20px;
@@ -141,14 +125,12 @@
       margin: 10px 0;
       font-family: monospace;
     }
-
     footer {
       margin-top: 30px;
       font-size: 0.75rem;
       color: #aaa;
       text-align: center;
     }
-
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(-20px); }
       to { opacity: 1; transform: translateY(0); }
@@ -156,7 +138,6 @@
   </style>
 </head>
 <body>
-
   <main>
     <h1>SurvivalZ</h1>
     <div class="status">🟢 Servidor Online | 👥 <span id="playersOnline">12</span> jogadores online</div>
@@ -167,6 +148,7 @@
       <button class="button" id="addServerBtn">Adicionar Servidor</button>
       <button class="button" id="storyBtn">História do Jogo</button>
       <button class="button" id="rulesBtn">Regras do Servidor</button>
+      <button class="button" id="startServerBtn">Iniciar Servidor</button>
       <button class="button" id="donateBtn">Fazer Doação</button>
     </div>
 
@@ -190,17 +172,7 @@
     <div class="modal-content">
       <span class="close" id="closeStoryModal">&times;</span>
       <h2>📖 História do Jogo</h2>
-      <p>Em um futuro não tão distante, uma praga desconhecida varreu o planeta em poucos meses. O caos tomou conta das ruas, famílias foram separadas, cidades inteiras foram abandonadas.</p>
-      <p>Os sobreviventes se refugiaram como puderam, formando pequenas comunidades ou vagando sozinhos, sempre na esperança de um dia reconstruir o que foi perdido.</p>
-      <p>Mas cada nascer do sol traz novos desafios. A doença evolui, e a cada noite as criaturas ficam mais fortes, mais rápidas, mais famintas.</p>
-      <p>As cidades estão cheias de recursos, mas também infestadas. É preciso coragem para explorá-las em busca de suprimentos.</p>
-      <p>Os mais ousados se unem em facções. Alguns buscam restabelecer a ordem, outros querem apenas poder e destruição.</p>
-      <p>Você acorda sozinho em um abrigo improvisado, cercado por sons estranhos vindos da floresta. Sua mochila está quase vazia, sua sede de vingança, não.</p>
-      <p>A cada dia, novas histórias surgem. Alguns traem seus aliados por um pedaço de pão. Outros se tornam lendas, líderes de fortalezas impenetráveis.</p>
-      <p>O inverno se aproxima. A comida se torna mais rara. Os infectados, antes lentos, agora caçam em bandos organizados.</p>
-      <p>Você deve construir, lutar, negociar, espionar. O mundo é cruel. Confie em poucos. Desconfie de todos.</p>
-      <p>Seu objetivo não é apenas sobreviver — é dominar, reconstruir e, quem sabe, encontrar uma cura antes que seja tarde demais.</p>
-      <p>Cada decisão conta. Cada amanhecer é uma vitória. Mas, cuidado: cada anoitecer pode ser o seu último.</p>
+      <p>Em um futuro não tão distante, uma praga desconhecida varreu o planeta...</p>
     </div>
   </div>
 
@@ -208,26 +180,7 @@
     <div class="modal-content">
       <span class="close" id="closeRulesModal">&times;</span>
       <h2>📜 Regras do Servidor</h2>
-      <p>1️⃣ Proibido usar hacks ou cheats.<br>
-      2️⃣ Respeite todos os jogadores.<br>
-      3️⃣ Não atacar aliados sem motivo.<br>
-      4️⃣ Sem griefing de construções alheias.<br>
-      5️⃣ Não abuse de bugs do jogo.<br>
-      6️⃣ Ajude novatos sempre que puder.<br>
-      7️⃣ Sem spam no chat.<br>
-      8️⃣ Não faça propaganda de outros servidores.<br>
-      9️⃣ Não compartilhe dados pessoais.<br>
-      🔟 Use nomes apropriados.<br>
-      1️⃣1️⃣ Construções ofensivas são proibidas.<br>
-      1️⃣2️⃣ Sem traps mortais em áreas públicas.<br>
-      1️⃣3️⃣ Não destrua farms comunitárias.<br>
-      1️⃣4️⃣ Não engane players com golpes.<br>
-      1️⃣5️⃣ Não abuse de redstone para lagar o servidor.<br>
-      1️⃣6️⃣ Admins têm palavra final.<br>
-      1️⃣7️⃣ Denuncie bugs ou hackers aos mods.<br>
-      1️⃣8️⃣ Sem xingamentos pesados ou preconceito.<br>
-      1️⃣9️⃣ Respeite zonas seguras.<br>
-      2️⃣0️⃣ Divirta-se e mantenha o clima amigável!</p>
+      <p>1️⃣ Proibido usar hacks ou cheats...<br>2️⃣0️⃣ Divirta-se!</p>
     </div>
   </div>
 
@@ -235,34 +188,37 @@
     <div class="modal-content">
       <span class="close" id="closeDonateModal">&times;</span>
       <h2>💚 Doação</h2>
-      <p>Ajude a manter o servidor online, sem lag e sempre atualizado. Qualquer valor faz diferença!</p>
+      <p>Ajude a manter o servidor online. Qualquer valor ajuda!</p>
       <div class="pix-key" id="pixKey">628469bc-6e6a-424a-a323-985f2833040c</div><br>
       <button class="button" onclick="copyPix()">Copiar Chave Pix</button>
     </div>
   </div>
 
-  <div id="musicModal" class="modal">
+  <div id="startServerModal" class="modal">
     <div class="modal-content">
-      <h2>🎵 Ativar Efeitos Sonoros?</h2>
-      <button class="button" id="musicYesBtn">Sim</button>
-      <button class="button" id="musicNoBtn">Não</button>
+      <h2>🔑 Iniciar Servidor</h2>
+      <p>Para iniciar o servidor, <strong>crie sua conta</strong> no Aternos e envie seu nome no grupo de WhatsApp. Assim podemos liberar para iniciar quando quiser.<br>
+      ⚠️ Caso já tenha feito isso, pode ignorar.</p>
+      <a class="button" href="https://aternos.org/servers/" target="_blank">Criar Conta</a>
+      <a class="button" href="https://aternos.org/servers/" target="_blank">Abrir servidor</a>
     </div>
   </div>
 
   <iframe id="bgMusic" width="0" height="0" src="" frameborder="0" allow="autoplay" style="display:none;"></iframe>
 
   <script>
-    // Modais
     const serverModal = document.getElementById('serverModal');
     const storyModal = document.getElementById('storyModal');
     const rulesModal = document.getElementById('rulesModal');
     const donateModal = document.getElementById('donateModal');
-    const musicModal = document.getElementById('musicModal');
+    const startServerModal = document.getElementById('startServerModal');
+    const bgMusic = document.getElementById('bgMusic');
 
     document.getElementById('addServerBtn').onclick = () => serverModal.style.display = 'block';
     document.getElementById('storyBtn').onclick = () => storyModal.style.display = 'block';
     document.getElementById('rulesBtn').onclick = () => rulesModal.style.display = 'block';
     document.getElementById('donateBtn').onclick = () => donateModal.style.display = 'block';
+    document.getElementById('startServerBtn').onclick = () => startServerModal.style.display = 'block';
 
     document.getElementById('closeServerModal').onclick = () => serverModal.style.display = 'none';
     document.getElementById('closeStoryModal').onclick = () => storyModal.style.display = 'none';
@@ -270,25 +226,15 @@
     document.getElementById('closeDonateModal').onclick = () => donateModal.style.display = 'none';
 
     window.onclick = function(event) {
-      [serverModal, storyModal, rulesModal, donateModal, musicModal].forEach(modal => {
+      [serverModal, storyModal, rulesModal, donateModal, startServerModal].forEach(modal => {
         if (event.target === modal) modal.style.display = 'none';
       });
     };
 
-    // Música de fundo
-    const musicYesBtn = document.getElementById('musicYesBtn');
-    const musicNoBtn = document.getElementById('musicNoBtn');
-    const bgMusic = document.getElementById('bgMusic');
-
-    window.onload = () => musicModal.style.display = 'block';
-
-    musicYesBtn.onclick = () => {
+    window.onload = () => {
       bgMusic.src = "https://www.youtube.com/embed/fxAbf-o9ysI?autoplay=1&loop=1&playlist=fxAbf-o9ysI&mute=0&controls=0";
-      musicModal.style.display = 'none';
     };
-    musicNoBtn.onclick = () => musicModal.style.display = 'none';
 
-    // Copiar Pix
     function copyPix() {
       const pixKey = document.getElementById('pixKey').innerText;
       navigator.clipboard.writeText(pixKey).then(() => {
@@ -296,13 +242,11 @@
       });
     }
 
-    // Jogadores online com número aleatório
     const playersOnline = document.getElementById('playersOnline');
     setInterval(() => {
       const randomPlayers = Math.floor(Math.random() * 30) + 5;
       playersOnline.textContent = randomPlayers;
     }, 4000);
   </script>
-
 </body>
 </html>
